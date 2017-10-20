@@ -1,6 +1,6 @@
 //
 //  DoubleExtensionTests.swift
-//  ExtendedDomainModel
+//  SimpleDomainModelTests
 //
 //  Created by AT on 10/18/17.
 //  Copyright © 2017 AT. All rights reserved.
@@ -8,7 +8,7 @@
 
 import XCTest
 
-import ExtendedDomainModel
+import SimpleDomainModel
 
 class DoubleExtensionTests: XCTestCase {
     
@@ -35,5 +35,5 @@ class DoubleExtensionTests: XCTestCase {
         XCTAssert(can.amount == 5)
         XCTAssert(can.currency == .CAN)
     }
-  
+    
 }

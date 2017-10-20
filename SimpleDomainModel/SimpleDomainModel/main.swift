@@ -1,6 +1,6 @@
 //
 //  main.swift
-//  ExtendedDomainModel
+//  SimpleDomainModel
 //
 //  Created by AT on 10/18/17.
 //  Copyright © 2017 AT. All rights reserved.
@@ -115,7 +115,7 @@ open class Job: CustomStringConvertible {
     }
     
     public var description: String {
-        return "Job Title: \(self.title) Job Type: \(self.type)"
+        return "Job Title: \(self.title)"
     }
     
     public init(title : String, type : JobType) {
@@ -151,7 +151,19 @@ open class Person: CustomStringConvertible {
     open var age : Int = 0
     
     public var description: String {
-        return "\(self.toString())"
+        var jobTitle : String
+        if job == nil {
+            jobTitle = "N/A"
+        } else {
+            jobTitle = job!.title
+        }
+        var spouseName : String
+        if spouse == nil {
+            spouseName = "N/A"
+        } else {
+            spouseName = spouse!.firstName
+        }
+        return "[First Name:\(firstName) Last Name:\(lastName) Age:\(age) Job:\(jobTitle) Spouse:\(spouseName)]"
     }
     
     public init(firstName : String, lastName : String, age : Int) {
